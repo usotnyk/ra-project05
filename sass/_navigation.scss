@@ -3,26 +3,29 @@
 --------------------------------------------------------------*/
 
 /* Links */
+	a {
+		//color: $color__link;
+		color: white;
 
-a {
-	color: $color__link;
+		&:visited {
+			//color: $color__link-visited;
+			color: white;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			//color: $color__link-hover;
+			color: white;
+		}
+		&:focus {
+			outline: thin dotted;
+		}
+		&:hover,
+		&:active {
+			outline: 0;
+		}
+	}
 
-	&:visited {
-		color: $color__link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-}
 
 /* Menus */
 
@@ -130,3 +133,29 @@ a {
 		width: 50%;
 	}
 }
+
+.navigation {
+  height: 60px;
+}
+
+.banner {
+  height: 100vh;
+  background-size: cover, cover; 
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+}
+
+.nav-li {
+	padding: 0 10px;
+}
+
+.nav-dark {
+	a {
+		color: $color__link;
+	}
+}
+
+hr {
+  border: 0.5px solid $color__background-hr;
+}
+

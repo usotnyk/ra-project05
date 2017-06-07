@@ -1,3 +1,4 @@
+this is index.php
 <?php
 /**
  * The main template file.

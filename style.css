@@ -240,6 +240,14 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
+h1 {
+  text-transform: uppercase;
+  text-align: center; }
+
+h2 {
+  text-transform: uppercase;
+  margin: 20px 0; }
+
 /* Copy */
 p {
   margin-bottom: 1.5rem; }
@@ -343,7 +351,6 @@ table {
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
-button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -358,15 +365,12 @@ input[type="submit"] {
   line-height: 1;
   padding: .6rem 1rem .4rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
     border-color: #ccc #bbb #aaa;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
+  input[type="button"]:active, input[type="button"]:focus,
   input[type="reset"]:active,
   input[type="reset"]:focus,
   input[type="submit"]:active,
@@ -408,11 +412,11 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: white; }
   a:visited {
-    color: purple; }
+    color: white; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: white; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -483,6 +487,24 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.navigation {
+  height: 60px; }
+
+.banner {
+  height: 100vh;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center; }
+
+.nav-li {
+  padding: 0 10px; }
+
+.nav-dark a {
+  color: #008C83; }
+
+hr {
+  border: 0.5px solid #ccc; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -656,3 +678,288 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.sinlge-view-margin {
+  margin: 5% 15%; }
+
+.btn-social {
+  margin: 0 7px; }
+
+/*sinle-products*/
+.single-products-container h2 {
+  color: #008C83; }
+
+.single-products-container span {
+  margin-left: 3px; }
+
+/*Sinle-Adventures*/
+.single-adventures-container h5 {
+  text-transform: uppercase; }
+
+/*Single-post: journal*/
+.single-post-container .single-post-img-container {
+  padding-top: 2%;
+  background: center/cover no-repeat;
+  height: 100vh; }
+
+.single-post-container h2 {
+  background-color: #008C83;
+  color: white;
+  width: 70%;
+  padding: 1% 5% 1% 3%; }
+
+.single-post-container .post-details-container {
+  background-color: #008C83;
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.5% 2%; }
+
+.single-post-container a {
+  color: #008C83;
+  text-decoration: none; }
+
+.single-post-container .categories-container, .single-post-container .tags-container {
+  padding: 10px;
+  text-transform: uppercase;
+  margin-bottom: 20px; }
+
+/*Archives*/
+.adventure-container {
+  width: 50%; }
+
+/*About page*/
+.about-title {
+  margin-top: -50vh;
+  margin-bottom: 50vh; }
+
+.archive-dotted-border {
+  border-bottom: 2px dotted #ccc;
+  padding: 20px 0; }
+
+.adventure-container {
+  width: 48%;
+  height: 35vw;
+  background: center/cover no-repeat;
+  margin: 5px; }
+  .adventure-container h2 {
+    text-align: left; }
+
+.product-container {
+  border: 1px solid #ccc;
+  width: 22%;
+  margin: 15px; }
+  .product-container a {
+    color: inherit;
+    text-decoration: none; }
+  .product-container .image-container {
+    width: 100%;
+    height: 25vw;
+    background: center/cover no-repeat; }
+  .product-container h4 {
+    padding: 0 10px; }
+  .product-container .dots {
+    border-bottom: 2px dotted #404040; }
+
+.archive-pagination-links {
+  text-align: center; }
+  .archive-pagination-links a {
+    color: #008C83; }
+
+.archive-products-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .archive-products-nav ul li {
+    padding: 0 20px; }
+    .archive-products-nav ul li a {
+      color: #008C83;
+      text-decoration: none; }
+
+/* Flex */
+.fl-align-center {
+  -ms-flex-align: center;
+      align-items: center; }
+
+.flex {
+  display: -ms-flexbox;
+  display: flex; }
+
+.fl-space-between {
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.flex-justify-center {
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.fl-col {
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+.wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.fl-align-cnt {
+  -ms-flex-align: center;
+      align-items: center; }
+
+.fl-one {
+  -ms-flex: 1;
+      flex: 1; }
+
+.fl-self-end {
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
+
+.pos-relative {
+  position: relative; }
+
+.pos-absolute {
+  position: absolute; }
+
+/* Margins and paddings */
+.text-center {
+  text-align: center; }
+
+.text-end {
+  text-align: end; }
+
+.width-full {
+  width: 100%; }
+
+.width-half {
+  width: 50%; }
+
+.width-quarter {
+  width: 25%; }
+
+.height-hundred {
+  height: 100%; }
+
+.height-75 {
+  height: 75%; }
+
+.padding-sm {
+  padding: 20px; }
+
+.padding-md {
+  padding: 50px; }
+
+.margin-sm {
+  margin: 10px; }
+
+.margin-md {
+  margin: 20px; }
+
+.margin-left-none {
+  margin-left: 0; }
+
+/* Colors */
+.font-white {
+  color: white; }
+
+/* Footer */
+.footer {
+  background: url("../../assets/images/dark-wood.png");
+  padding-bottom: 0px;
+  margin-top: 20px; }
+  .footer h5 {
+    color: #E79263;
+    font-size: 0.8em;
+    margin-top: 0; }
+  .footer p {
+    font-size: 0.7em;
+    margin-bottom: 0; }
+  .footer i {
+    margin: 7px 7px 7px 0; }
+
+/* Buttons */
+.btn, .shop-btn, .adv-btn, .entry-btn, .btn-social, .read-btn {
+  text-transform: uppercase; }
+
+.btn:hover, .shop-btn:hover, .adv-btn:hover, .entry-btn:hover, .btn-social:hover, .read-btn:hover {
+  outline: -webkit-focus-ring-color auto 5px; }
+
+/* Home-shop */
+.shop-container {
+  border: 1px solid #DFDFDF;
+  border-top: 3px solid #DFDFDF;
+  padding: 10px; }
+  .shop-container p {
+    margin: 20px 0; }
+
+.shop-btn, .adv-btn {
+  color: white;
+  background-color: #008C83;
+  border: none;
+  padding: 8px 15px; }
+
+/*Journal*/
+.journal-container {
+  border: 1px solid #DFDFDF;
+  margin: 0 5px; }
+  .journal-container p {
+    font-size: 0.5em; }
+  .journal-container h3 {
+    text-transform: uppercase;
+    color: #008C83;
+    margin-bottom: 10px; }
+  .journal-container div {
+    padding: 10px; }
+  .journal-container .img-container {
+    border-bottom: 3px solid #DFDFDF; }
+
+.entry-btn, .btn-social, .read-btn {
+  border: 1px solid black;
+  padding: 8px 15px;
+  background-color: transparent; }
+
+/* Home-Adventures */
+.latest-posts-container {
+  height: 400px; }
+  .latest-posts-container h2 {
+    font-size: 2em;
+    line-height: 1.3em; }
+  .latest-posts-container h3 {
+    font-size: 1.7em;
+    line-height: 1.3em; }
+  .latest-posts-container h4 {
+    font-size: 1.1em;
+    line-height: 1.3em;
+    margin: 1em 0; }
+
+.read-btn {
+  border: 1px solid white;
+  color: white;
+  margin-top: 20px; }
+
+.article-box, .article-box-1, .article-box-2, .article-box-3, .article-box-4 {
+  height: 100%;
+  padding: 20px 10px;
+  background: center/cover no-repeat; }
+
+.article-box-1 {
+  margin-right: 7px; }
+
+.article-box-2 {
+  margin-bottom: 7px; }
+
+.article-box-3 {
+  margin-right: 7px; }
+
+.adv-btn {
+  margin: 40px 20px 20px 20px; }
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.pos-relative {
+  position: relative; }

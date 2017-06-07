@@ -1,0 +1,62 @@
+.archive-dotted-border {
+  border-bottom: 2px dotted #ccc;
+  padding: 20px 0; 
+}
+
+.adventure-container {
+  width: 48%;
+  height: 35vw;
+  background: center/cover no-repeat;
+  margin: 5px;
+  h2 {
+    text-align: left;
+  }
+}
+
+.product-container {
+  border: 1px solid #ccc;
+  width: 22%;
+  margin: 15px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 25vw;
+    background: center/cover no-repeat; 
+  }
+  
+  h4 {
+    padding: 0 10px;
+  }
+
+  .dots {
+    border-bottom: 2px dotted $color__text-main;
+  }
+
+}
+
+.archive-pagination-links {
+  text-align: center;
+  a {
+    color: $color-main;
+  }
+}
+
+.archive-products-nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 0 20px;
+      a {
+        color: $color-main;
+        text-decoration: none;
+      }
+    }
+  }
+}

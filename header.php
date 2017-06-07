@@ -13,8 +13,10 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+
 	<?php wp_head(); ?>
 	</head>
+
 
 	<body <?php body_class(); ?>>
 		<div id="page" class="hfeed site">
@@ -25,11 +27,45 @@
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
+			
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div style="<?php  
+				$banner = new display_banner();
+			?>" class='banner'> <!--banner div -->
+
+				<nav id="site-navigation" class="main-navigation flex fl-space-between fl-align-center navigation <?php 
+					if(!get_field("banner-image") || is_post_type_archive()) {?>
+					nav-dark <?php
+						};?>" role="navigation">
+
+					<img class="height-75" src="<?php bloginfo("stylesheet_directory"); ?>/assets/images/logos/
+				<?php
+					if(get_field("banner-image") && !is_post_type_archive()) {
+						echo "inhabitent-logo-tent-white.svg";
+					} else {
+						echo "inhabitent-logo-tent.svg";
+					}
+				?>
+					">
+					
+
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
+					
+				</nav> <!-- #site-navigation -->
+				</div> <!--banner div -->
+				
+				<?php
+				//adding horizontal rule 
+				if(!get_field("banner-image") || is_post_type_archive()) { ?>
+					<hr>
+					<?php } ?>
+
+				
+				<!-- <div class="banner"></div> -->
+
+
+
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

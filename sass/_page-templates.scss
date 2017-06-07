@@ -3,3 +3,87 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
+.sinlge-view-margin {
+  margin: 5% 15%;
+}
+
+.btn-social {
+  @extend .entry-btn;
+  margin: 0 7px;
+}
+
+/*sinle-products*/
+
+.single-products-container {
+  h2 {
+    color: $color-main;
+  }
+  span {
+    margin-left: 3px;
+  }
+}
+
+/*Sinle-Adventures*/
+.single-adventures-container {
+
+  h5 {
+    text-transform: uppercase;
+  }
+
+}
+
+/*Single-post: journal*/
+
+.single-post-container {
+
+  .single-post-img-container {
+    padding-top: 2%;
+    background: center/cover no-repeat;
+    height: 100vh;
+  }
+
+  h2 {
+    background-color: $color-main;
+    color: white;
+    width: 70%;
+    //margin-top: 10%;
+    padding: 1% 5% 1% 3%;
+  }
+
+  .post-details-container {
+    background-color: $color-main;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.5% 2%;
+  }
+
+  a {
+    color: $color-main;
+    text-decoration: none;
+  }
+
+  .categories-container, .tags-container {
+    padding: 10px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+}
+
+/*Archives*/
+
+.adventure-container {
+  width: 50%;
+}
+
+/*About page*/
+.about-title {
+  margin-top: -50vh;
+  margin-bottom: 50vh;
+}
+
+
