@@ -159,5 +159,37 @@ function wmpudev_enqueue_icon_stylesheet() {
   wp_enqueue_style( 'fontawesome');
 }
 add_action( 'wp_enqueue_scripts', 'wmpudev_enqueue_icon_stylesheet' );
+
+//Register custom sidebar
+
+register_sidebar( array(
+  'name'          => __( 'footer-sidebar', 'theme_text_domain' ),
+  'id'            => 'footer-sidebar',
+  'description'   => '',
+        'class'         => '',
+  'before_widget' => '<section id="%1$s" class="widget %2$s">',
+  'after_widget'  => '</section>',
+  'before_title'  => '<h5 class="widgettitle">',
+  'after_title'   => '</h5>' ) );
+
+register_sidebar( array(
+  'name'          => __( 'logo-sidebar', 'theme_text_domain' ),
+  'id'            => 'logo-sidebar',
+  'description'   => '',
+        'class'         => '',
+  'before_widget' => '<section id="%1$s" class="widget %2$s">',
+  'after_widget'  => '</section>') );
+
+//Query for products archive
+
+function filter_query_products_archive( $query ) {
+  if(is_post_type_archive('products')) {
+    $query->set("posts_per_page", 16);
+    $query->set("order","ASC");
+    return $query;
+  }  
+}
+
+add_filter( 'pre_get_posts', 'filter_query_products_archive' );
 ?>
 

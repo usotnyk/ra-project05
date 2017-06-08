@@ -71,13 +71,25 @@
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-  
-}
 
-/*Archives*/
+  .comments {
+    margin-top: 4%;
+    border-top: 1px solid #ccc;
+  }
 
-.adventure-container {
-  width: 50%;
+  .form-input {
+    background-color: #F4F4F4;
+  }
+
+  .submit-btn {
+    @extend .adv-btn;
+  }
+
+  form {
+    label {
+      text-transform: uppercase;
+    }
+  }
 }
 
 /*About page*/
@@ -85,5 +97,28 @@
   margin-top: -50vh;
   margin-bottom: 50vh;
 }
+
+/*Find us page*/
+
+.find-us-container {
+  h1 {
+    text-align: left;
+  }
+
+  .form-input {
+    background-color: #F4F4F4;
+  }
+
+  .submit-btn {
+    @extend .adv-btn;
+  }
+
+  form {
+    label {
+      text-transform: uppercase;
+    }
+  }
+}
+
 
 

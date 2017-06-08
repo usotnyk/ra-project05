@@ -2,15 +2,13 @@
 get_header();
 
 //$q = new WP_Query( 'posts_per_page=16' );
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-$arguments = array(
-  'post_type' => 'products',
-  'order' => 'DESC',
-  'posts_per_page' => 4,
-  'paged' => $paged);
+// $arguments = array(
+//   'post_type' => 'products',
+//   'order' => 'DESC',
+//   'posts_per_page' => 16);
 
 
-$query = new wp_Query($arguments);
+// $query = new wp_Query($arguments);
 ?>
 <div class="margin-md">
   <h1>Shop Stuff</h1>
@@ -24,7 +22,8 @@ $query = new wp_Query($arguments);
   </nav>
   <div class="flex wrap flex-justify-center margin-sm">
     <?php
-    while ($query->have_posts()): $query->the_post();
+    //while ($query->have_posts()): $query->the_post();
+    while (have_posts()): the_post();
     ?>
 
       <div class="product-container">
@@ -45,13 +44,6 @@ $query = new wp_Query($arguments);
 
     ?>
   </div>
-  <div class="archive-pagination-links">
-    <div><?php posts_nav_link( " - ", "PREVIOUS", "NEXT" ); ?></div>
-  
-    <div><?php next_posts_link( 'Show previous products' ); ?></div>
-    <div><?php previous_posts_link( 'Show next products' ); ?></div>
-  </div>
-
 
 </div>
 

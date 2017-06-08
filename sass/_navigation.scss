@@ -149,7 +149,7 @@
 	padding: 0 10px;
 }
 
-.nav-dark {
+.nav-green {
 	a {
 		color: $color__link;
 	}
@@ -159,3 +159,19 @@ hr {
   border: 0.5px solid $color__background-hr;
 }
 
+
+.logo-white section:nth-child(2) {
+	display: none;
+}
+
+.logo-green section:nth-child(1) {
+	display: none;
+}
+
+.logo-wrapper * {
+	height: 50px;
+}
+
+.logo-wrapper section {
+	margin: 0;
+}

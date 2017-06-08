@@ -1,3 +1,5 @@
+this is search.php
+
 <?php
 /**
  * The template for displaying search results pages.
@@ -34,5 +36,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

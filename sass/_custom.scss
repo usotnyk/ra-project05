@@ -64,6 +64,10 @@
   width: 25%;
 }
 
+.width-third {
+  width: 30%;
+}
+
 .height-hundred {
   height: 100%;
 }
@@ -101,23 +105,61 @@
 /* Footer */
 
 .footer {
+  
   background: url('../../assets/images/dark-wood.png');
   padding-bottom: 0px;
   margin-top: 20px;
-    h5 {
-      color: #E79263;
-      font-size: 0.8em;
-      margin-top: 0;
-    }
-    p {
-      font-size: 0.7em;
-      margin-bottom: 0;
-    }
-
-    i {
-      margin: 7px 7px 7px 0;
-    } 
+  
+  a {
+  text-decoration: none;
+  }
 }
+
+.footer, .sidebar {
+  h5 {
+    color: #E79263;
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 1em;
+    margin-bottom: 0;
+    line-height: 2.5em;
+    margin-top: 0;
+  }
+
+  i {
+      margin: 0px 7px 7px 0;
+  }
+
+  .contact-line-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  } 
+}
+
+/*Side*/
+.sidebar {
+  border-left: 2px solid #ccc;
+  padding: 1% 3%;
+
+  a {
+    text-decoration: none;
+    color: $color__link;
+  }
+  .widget-address {
+    line-height: 1.5em;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 
 /* Buttons */
 .btn {
@@ -242,4 +284,22 @@
 .pos-relative {
   position: relative;
 }
+
+
+/*Find us page*/
+
+// .find-us-container {
+//   h1 {
+//     text-align: left;
+//   }
+
+//   .form-input {
+//     background-color: #F4F4F4;
+//   }
+
+//   .submit-btn {
+//     @extend .adv-btn;
+//   }
+
+// }
 
