@@ -22,8 +22,14 @@ get_header();?>
   <?php
   endwhile; // End of the loop. 
 
-  get_footer();
   ?>
 
   </div>
+  
+  <div class= "text-center">
+    <?php red_starter_numbered_pagination(); ?>
+  </div>
+
 </div>
+
+<?php   get_footer(); ?>

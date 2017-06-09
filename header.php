@@ -33,15 +33,21 @@
 				$banner = new display_banner();
 			?>" class='banner'> <!--banner div -->
 
-				<nav id="site-navigation" class="main-navigation flex fl-space-between fl-align-center navigation <?php echo $banner->nav_font_color; ?>" role="navigation">
+				<nav id="site-navigation" class="main-navigation flex flex-space-between flex-align-center navigation <?php echo $banner->nav_font_color; ?>" role="navigation">
 					<div class="logo-wrapper <?php echo $banner->logo_color; ?>">
 
 						<?php dynamic_sidebar('logo-sidebar'); ?>
 					</div>
-
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-					
+					<div class="flex flex-align-center">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						<div class="nav-search-container">
+							<div id="nav-search-form">
+								<?php get_search_form(); ?>
+							</div>
+							<i id="search-icon" class="fa fa-search" aria-hidden="true"></i>
+						</div>
+					</div>
 				</nav> <!-- #site-navigation -->
 				</div> <!--banner div -->
 				

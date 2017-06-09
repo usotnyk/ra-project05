@@ -11,7 +11,7 @@ $category_list = get_the_category_list(", ", 'multiple');
 ?>
 <div class="flex">
 
-  <div class="single-post-container fl-one margin-md">
+  <div class="single-post-container flex-one margin-md">
       <div class="single-post-img-container pos-relative" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
         <h2><?php the_title(); ?></h2>
         <div class="post-details-container">
@@ -53,9 +53,11 @@ $category_list = get_the_category_list(", ", 'multiple');
 
       <div class="comments">
         <?php
-        include("comments.php");
-        ?>
-
+        // If comments are open or we have at least one comment, load up the comment template.
+        if ( comments_open() || get_comments_number() ) :
+          comments_template();
+        endif;
+      ?>
       </div>
   </div>
 

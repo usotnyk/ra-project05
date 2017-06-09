@@ -37,11 +37,12 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"],
+//input[type="search"],
 textarea {
 	color: #666;
 	border: 1px solid #ccc;
 	border-radius: 3px;
+	background-color: #F4F4F4;
 
 	&:focus {
 		color: #111;
@@ -51,12 +52,49 @@ textarea {
 input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"],
-input[type="search"] {
+//input[type="search"], 
+input[type="password"] {
 	padding: 3px;
 }
 
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+.search-form {
+	fieldset {
+		border: 1px solid $color__text-main;
+		border-radius: 20px;
+		max-width: 300px;
+		background-color: white;
+		border: 1px solid $color__background-hr;
+		label {
+			float: left;
+		}
+		button {
+			float: right;
+			border: none;
+			background-color: white;
+			color: $color-main;
+			padding-top: 3px;
+
+			&:focus {
+				@extend button;
+				outline: none;
+			}
+		}
+		input {
+			border: none;
+			background-color: white;
+			padding-top: 3px;
+		
+			&:focus {
+				@extend input;
+				outline: none;
+				background-color: white;
+				border: none;
+			}
+		}	
+	}
 }

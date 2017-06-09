@@ -2,7 +2,7 @@
 get_header();
 ?>
 <div class="flex">
-  <div class="find-us-container margin-md fl-one">
+  <div class="find-us-container margin-md flex-one">
     <?php
     while ( have_posts() ) : the_post();
     ?>

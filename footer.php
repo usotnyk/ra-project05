@@ -10,7 +10,7 @@
 			</div><!-- #content -->
 
 			<footer class="font-white padding-md footer">
-        <div class="flex fl-space-between">
+        <div class="flex flex-space-between">
         <?php 
         dynamic_sidebar('footer-sidebar');
 

@@ -72,9 +72,22 @@
     margin-bottom: 20px;
   }
 
+//clean up form styling!
+
   .comments {
     margin-top: 4%;
     border-top: 1px solid #ccc;
+    
+    h3 {
+      text-transform: uppercase;
+    }
+    textarea, input {
+      background-color: #F4F4F4;
+    }
+
+    .form-submit {
+      //@extend .adv-btn;
+    }
   }
 
   .form-input {
@@ -84,7 +97,6 @@
   .submit-btn {
     @extend .adv-btn;
   }
-
   form {
     label {
       text-transform: uppercase;
@@ -120,5 +132,32 @@
   }
 }
 
+/*404 page*/
+
+.not-found-container {
+  h1 {
+    text-align: left;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+/*Search results page*/
+
+.search-results-container {
+  h1 {
+    text-align: left;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
 
 

@@ -29,10 +29,10 @@ get_header();
       <div class="product-container">
         <a href="<?php the_permalink(); ?>">
           <div class="image-container" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<?php echo get_field("image") ?>');"></div>
-          <h4 class="flex fl-space-between">
-            <span class="dt"><?php the_title(); ?> </span>
-            <span class="fl-one dots"></span> 
-            <span class="dd"> <?php the_field("price"); ?> </span>
+          <h4 class="flex flex-space-between">
+            <span><?php the_title(); ?> </span>
+            <span class="flex-one dots"></span> 
+            <span> <?php the_field("price"); ?> </span>
           </h4>
           
         </a>
@@ -45,6 +45,9 @@ get_header();
     ?>
   </div>
 
+  <div class= "text-center">
+    <?php red_starter_numbered_pagination(); ?>
+  </div>
 </div>
 
 <?php get_footer(); ?>

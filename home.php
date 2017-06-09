@@ -3,11 +3,11 @@ get_header();
 ?>
 
 <div class="flex">
-  <div class="archive-journal-container margin-md fl-one">
+  <div class="archive-journal-container margin-md flex-one">
     <?php
     while ( have_posts() ) : the_post();
     ?>
-  <div class="single-post-container fl-one margin-md">
+  <div class="single-post-container flex-one margin-md">
       <div class="single-post-img-container pos-relative" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
         <h2><?php the_title(); ?></h2>
         <div class="post-details-container">
@@ -26,6 +26,11 @@ get_header();
         </button>
         </a>
     
+
+    <div class= "text-center">
+      <?php red_starter_numbered_pagination(); ?>
+    </div>
+
   </div>
     <?php
     endwhile;

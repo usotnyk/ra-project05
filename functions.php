@@ -103,7 +103,8 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
-//registering CPT + taxonomy
+//register CPT + taxonomy
+
 function add_taxonomy () {
 
   $tax_array = array(
@@ -152,7 +153,7 @@ function create_project_tax($tax_name, $cust_post_type) {
 }
 add_action( 'init', 'add_taxonomy' );
 
-//Adding font-awesome library
+//Add font-awesome library
 
 function wmpudev_enqueue_icon_stylesheet() {
   wp_register_style( 'fontawesome', 'http:////maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
@@ -160,7 +161,16 @@ function wmpudev_enqueue_icon_stylesheet() {
 }
 add_action( 'wp_enqueue_scripts', 'wmpudev_enqueue_icon_stylesheet' );
 
-//Register custom sidebar
+//Add jquery library
+
+function jquery_script() {
+  wp_deregister_script('jquery');
+  wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-3.2.1.min.js", false, null);
+  wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/main.js' );
+}
+add_action( 'wp_enqueue_scripts', 'jquery_script' );
+
+//Register custom sidebars -> aside + nav_logo
 
 register_sidebar( array(
   'name'          => __( 'footer-sidebar', 'theme_text_domain' ),
@@ -184,7 +194,7 @@ register_sidebar( array(
 
 function filter_query_products_archive( $query ) {
   if(is_post_type_archive('products')) {
-    $query->set("posts_per_page", 16);
+    $query->set("posts_per_page", 8);
     $query->set("order","ASC");
     return $query;
   }  

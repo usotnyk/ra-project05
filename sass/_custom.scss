@@ -1,5 +1,33 @@
 /* Flex */
-.fl-align-center {
+// .fl-align-center {
+//   align-items: center;
+// }
+
+.flex-align-center {
+  align-items: center;
+}
+
+// .fl-space-between {
+//   justify-content: space-between;
+// }
+// 
+.flex-space-between {
+  justify-content: space-between;
+}
+
+// .fl-col {
+//   flex-direction: column;
+// }
+
+.flex-col {
+  flex-direction: column;
+}
+
+// .fl-align-cnt {
+//   align-items: center;
+// }
+
+.flex-align-center {
   align-items: center;
 }
 
@@ -7,29 +35,22 @@
   display: flex;
 }
 
-.fl-space-between {
-  justify-content: space-between;
-}
-
 .flex-justify-center {
   justify-content: center;
-}
-
-.fl-col {
-  flex-direction: column;
 }
 
 .wrap {
   flex-wrap: wrap;
 }
 
-.fl-align-cnt {
-  align-items: center;
-}
+// .fl-one {
+//   flex: 1;
+// }
 
-.fl-one {
+.flex-one {
   flex: 1;
 }
+
 .fl-self-end {
   align-self: flex-end;
 }
@@ -280,26 +301,3 @@
   top: 0;
   left: 0;
 }
-
-.pos-relative {
-  position: relative;
-}
-
-
-/*Find us page*/
-
-// .find-us-container {
-//   h1 {
-//     text-align: left;
-//   }
-
-//   .form-input {
-//     background-color: #F4F4F4;
-//   }
-
-//   .submit-btn {
-//     @extend .adv-btn;
-//   }
-
-// }
-

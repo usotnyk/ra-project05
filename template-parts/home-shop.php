@@ -12,15 +12,12 @@
   $button_link = get_term_link($id);
 
   ?>
-  
 
   <article class="shop-container text-center margin-sm">
     <img src="<?php echo $img_link; ?>" class="width-quarter">
     <p><?php echo $description; ?></p>
     <a href="<?php echo $button_link; ?>"><button class="shop-btn margin-sm"><?php echo $term_name ?> STUFF</button></a>
   </article>
-
-
 
 <?php } ?>
   </div>
