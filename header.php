@@ -28,9 +28,10 @@
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
 			
+			<?php $banner = new display_banner(); ?>
 
 			<div style="<?php  
-				$banner = new display_banner();
+				$banner->check_img();
 			?>" class='banner'> <!--banner div -->
 
 				<nav id="site-navigation" class="main-navigation flex flex-space-between flex-align-center navigation <?php echo $banner->nav_font_color; ?>" role="navigation">

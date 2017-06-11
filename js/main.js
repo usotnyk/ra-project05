@@ -1,5 +1,3 @@
-console.log("test");
-
 //showing/hiding search form in navigation on click
 
 $(document).ready(function(){
@@ -7,8 +5,6 @@ $(document).ready(function(){
 
         $("#search-icon").hide();
         $("#nav-search-form").show();
-    
-
     });
 
     $(document).mouseup(function(e) {

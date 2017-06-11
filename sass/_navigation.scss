@@ -15,7 +15,7 @@
 		&:focus,
 		&:active {
 			color: $color__link;
-			//color: white;
+			color: $color__link-hover;
 		}
 		&:focus {
 			outline: thin dotted;
@@ -73,7 +73,7 @@
 
 			li {
 				&:hover > ul,
-				&.focus > ul {
+				&.focus > ul { 
 					left: 100%;
 				}
 			}

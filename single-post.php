@@ -16,7 +16,7 @@ $category_list = get_the_category_list(", ", 'multiple');
         <h2><?php the_title(); ?></h2>
         <div class="post-details-container">
           <span><?php the_date() ?> /</span>
-          <span> 3 comments / </span>
+          <span> <?php echo get_comments_number(); ?> Comments / </span>
           <span><?php the_author() ?></span>
         </div>
       </div>
@@ -37,18 +37,18 @@ $category_list = get_the_category_list(", ", 'multiple');
 
       <!--buttons-->
       <div class="flex">
-        <button class="btn-social">
+        <a href="#" class="btn btn-social">
           <i class="fa fa-facebook" aria-hidden="true"></i>
           <span>Like</span>
-        </button>
-        <button class="btn-social">
+        </a>
+        <a href="#" class="btn btn-social">
           <i class="fa fa-twitter" aria-hidden="true"></i>
           <span>Tweet</span>
-          </button>
-        <button class="btn-social">
+          </a>
+        <a href="#" class="btn btn-social">
           <i class="fa fa-pinterest" aria-hidden="true"></i>
           <span>PIN</span>
-        </button>
+        </a>
       </div>
 
       <div class="comments">

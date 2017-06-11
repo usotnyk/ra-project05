@@ -1,34 +1,15 @@
 /* Flex */
-// .fl-align-center {
-//   align-items: center;
-// }
 
 .flex-align-center {
   align-items: center;
 }
 
-// .fl-space-between {
-//   justify-content: space-between;
-// }
-// 
 .flex-space-between {
   justify-content: space-between;
 }
 
-// .fl-col {
-//   flex-direction: column;
-// }
-
 .flex-col {
   flex-direction: column;
-}
-
-// .fl-align-cnt {
-//   align-items: center;
-// }
-
-.flex-align-center {
-  align-items: center;
 }
 
 .flex {
@@ -42,10 +23,6 @@
 .wrap {
   flex-wrap: wrap;
 }
-
-// .fl-one {
-//   flex: 1;
-// }
 
 .flex-one {
   flex: 1;
@@ -61,7 +38,6 @@
 .pos-absolute {
   position: absolute;
 }
-
 
 /* Margins and paddings */
 
@@ -133,6 +109,7 @@
   
   a {
   text-decoration: none;
+  color: white;
   }
 }
 
@@ -164,7 +141,7 @@
 /*Side*/
 .sidebar {
   border-left: 2px solid #ccc;
-  padding: 1% 3%;
+  padding: 10px 40px;
 
   a {
     text-decoration: none;
@@ -181,123 +158,15 @@
   }
 }
 
-
 /* Buttons */
-.btn {
+  a.btn {
   text-transform: uppercase;
-}
-.btn:hover {
-  outline: -webkit-focus-ring-color auto 5px;
-}
-/* Home-shop */
-
-.shop-container {
-  border: 1px solid #DFDFDF;
-  border-top: 3px solid #DFDFDF;
+  text-decoration: none;
+  //color: white;
   padding: 10px;
-    p {
-      margin: 20px 0;
-    }
+  display: inline-block;
 }
 
-.shop-btn {
-  @extend .btn;
-  color: white;
-  background-color: $color-main;
-  border: none;
-  padding: 8px 15px;
-}
-
-/*Journal*/
-.journal-container {
-  border: 1px solid #DFDFDF;
-  margin: 0 5px;
-    p {
-      font-size: 0.5em;
-    }
-    h3 {
-      text-transform: uppercase;
-      color: $color-main;
-      margin-bottom: 10px; 
-    }
-    div {
-      padding: 10px;
-    }
-    .img-container {
-      border-bottom: 3px solid #DFDFDF;
-    }
-}
-
-.entry-btn {
-  @extend .btn;
-  border: 1px solid black;
-  padding: 8px 15px;
-  background-color: transparent;
-}
-
-/* Home-Adventures */
-
-.latest-posts-container {
-  height: 400px;
-    h2 {
-      font-size: 2em;
-      line-height:1.3em; 
-    }
-    h3 {
-      font-size: 1.7em;
-      line-height:1.3em;
-    }
-    h4 {
-      font-size: 1.1em;
-      line-height:1.3em;
-      margin: 1em 0;
-    }
-}
-
-.read-btn {
-  @extend .btn;
-  @extend .entry-btn;  
-  border: 1px solid white;
-  color: white;
-  margin-top: 20px;
-}
-
-.article-box {
-  height: 100%;
-  padding: 20px 10px;
-  background: center/cover no-repeat;
-}
-
-.article-box-1 {
-  @extend .article-box;
-  margin-right: 7px;
-}
-
-.article-box-2 {
-  @extend .article-box;
-  margin-bottom: 7px;
-}
-
-.article-box-3 {
-  @extend .article-box;
-  margin-right: 7px;
-}
-
-.article-box-4 {
-  @extend .article-box;
-}
-
-.adv-btn {
-  @extend .btn;
-  @extend .shop-btn;
-  margin: 40px 20px 20px 20px;
-}
-
-.bg-image {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
+a.btn:hover {
+  outline: -webkit-focus-ring-color auto 5px;
 }

@@ -17,12 +17,10 @@
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
-		<a href="<?php the_permalink(); ?>">
-			<button class="entry-btn">
+		<a href="<?php the_permalink(); ?>" class="btn entry-btn">
 		    <span>READ MORE</span>
 		    <span>
 		      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 		    </span>
-		  </button>
 	 	</a>
 </article><!-- #post-## -->

@@ -49,6 +49,13 @@ textarea {
 	}
 }
 
+form{
+	input[type="submit"] {
+		@extend .btn;
+		@extend .adv-btn;  
+	}
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],

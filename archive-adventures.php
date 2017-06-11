@@ -3,13 +3,10 @@
 get_header();?>
 <div class="margin-md">
   <h1 class="archive-dotted-border">Latest Adventures</h1>
-  <div class="flex wrap">
+  <div class="flex wrap flex-justify-center">
 
   <?php
   while ( have_posts() ) : the_post();
-
-
-  //the_field("banner-image");
 
   ?>
 

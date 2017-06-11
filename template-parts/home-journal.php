@@ -18,9 +18,9 @@ $date = get_the_date(); ?>
 
     <div class="img-container"><?php echo $blog_img ?></div>
     <div>
-      <p><?php echo $date ?> / 3 comments</p>
+      <p><?php echo $date ?> / <?php echo get_comments_number(); ?> Comments</p>
       <h3><?php echo $blog_title ?></h3>
-      <a href="<?php echo $link ?>"><button class="entry-btn">READ ENTRY </button></a>
+      <a href="<?php echo $link ?>" class="btn entry-btn">READ ENTRY </a>
     </div>
   </article>
 

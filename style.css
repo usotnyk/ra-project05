@@ -432,7 +432,8 @@ a {
   a:visited {
     color: #008C83; }
   a:hover, a:focus, a:active {
-    color: #008C83; }
+    color: #008C83;
+    color: #00625B; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -726,13 +727,6 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
-.sinlge-view-margin {
-  margin: 5% 15%; }
-
-.btn-social {
-  margin: 0 7px; }
-
 /*sinle-products*/
 .single-products-container h2 {
   color: #008C83; }
@@ -744,9 +738,20 @@ object {
 .single-adventures-container h5 {
   text-transform: uppercase; }
 
+.sinlge-view-margin {
+  margin: 50px 150px; }
+
+a.btn-social {
+  margin: 0 7px;
+  color: black;
+  border: 1px solid black; }
+
+a.btn.btn-social {
+  padding: 10px 20px; }
+
 /*Single-post: journal*/
 .single-post-container .single-post-img-container {
-  padding-top: 2%;
+  padding-top: 20px;
   background: center/cover no-repeat;
   height: 100vh; }
 
@@ -754,7 +759,7 @@ object {
   background-color: #008C83;
   color: white;
   width: 70%;
-  padding: 1% 5% 1% 3%; }
+  padding: 10px 30px 10px 10px; }
 
 .single-post-container .post-details-container {
   background-color: #008C83;
@@ -763,10 +768,9 @@ object {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 0.5% 2%; }
+  padding: 5px 10px; }
 
 .single-post-container a {
-  color: #008C83;
   text-decoration: none; }
 
 .single-post-container .categories-container, .single-post-container .tags-container {
@@ -775,7 +779,7 @@ object {
   margin-bottom: 20px; }
 
 .single-post-container .comments {
-  margin-top: 4%;
+  margin-top: 40px;
   border-top: 1px solid #ccc; }
   .single-post-container .comments h3 {
     text-transform: uppercase; }
@@ -822,28 +826,101 @@ object {
 .search-results-container a {
   text-decoration: none; }
 
+/* Home-shop */
+.shop-container {
+  border: 1px solid #DFDFDF;
+  border-top: 3px solid #DFDFDF;
+  padding: 10px; }
+  .shop-container p {
+    margin: 20px 0; }
+
+a.shop-btn {
+  color: white;
+  background-color: #008C83;
+  border: none;
+  padding: 8px 15px; }
+
+/*Journal*/
+.journal-container {
+  border: 1px solid #DFDFDF;
+  margin: 0 5px; }
+  .journal-container p {
+    font-size: 0.5em; }
+  .journal-container h3 {
+    text-transform: uppercase;
+    color: #008C83;
+    margin-bottom: 10px; }
+  .journal-container div {
+    padding: 10px; }
+  .journal-container .img-container {
+    border-bottom: 3px solid #DFDFDF; }
+
+a.entry-btn {
+  border: 1px solid black;
+  padding: 8px 15px;
+  background-color: transparent;
+  color: black; }
+
+/* Home-Adventures */
+.latest-posts-container {
+  height: 400px; }
+  .latest-posts-container h2 {
+    font-size: 2em;
+    line-height: 1.3em; }
+  .latest-posts-container h3 {
+    font-size: 1.7em;
+    line-height: 1.3em; }
+  .latest-posts-container h4 {
+    font-size: 1.1em;
+    line-height: 1.3em;
+    margin: 1em 0; }
+
+a.read-btn {
+  border: 1px solid white;
+  color: white;
+  margin-top: 20px; }
+
+.article-box, .article-box-1, .article-box-2, .article-box-3, .article-box-4 {
+  height: 100%;
+  padding: 20px 10px;
+  background: center/cover no-repeat; }
+
+.article-box-1 {
+  margin-right: 7px; }
+
+.article-box-2 {
+  margin-bottom: 7px; }
+
+.article-box-3 {
+  margin-right: 7px; }
+
+a.adv-btn, .single-post-container a.submit-btn, .find-us-container a.submit-btn {
+  margin: 40px 20px 20px 20px;
+  background-color: #008C83;
+  color: white; }
+
 .archive-dotted-border {
   border-bottom: 2px dotted #ccc;
   padding: 20px 0; }
 
 .adventure-container {
-  width: 48%;
+  width: 45vw;
   height: 35vw;
   background: center/cover no-repeat;
-  margin: 5px; }
+  margin: 20px; }
   .adventure-container h2 {
     text-align: left; }
 
 .product-container {
   border: 1px solid #ccc;
-  width: 22%;
+  width: 20vw;
   margin: 15px; }
   .product-container a {
     color: inherit;
     text-decoration: none; }
   .product-container .image-container {
     width: 100%;
-    height: 25vw;
+    height: 20vw;
     background: center/cover no-repeat; }
   .product-container h4 {
     padding: 0 10px; }
@@ -877,10 +954,6 @@ object {
 .flex-col {
   -ms-flex-direction: column;
       flex-direction: column; }
-
-.flex-align-center {
-  -ms-flex-align: center;
-      align-items: center; }
 
 .flex {
   display: -ms-flexbox;
@@ -958,7 +1031,8 @@ object {
   padding-bottom: 0px;
   margin-top: 20px; }
   .footer a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: white; }
 
 .footer h5, .sidebar h5 {
   color: #E79263;
@@ -986,7 +1060,7 @@ object {
 /*Side*/
 .sidebar {
   border-left: 2px solid #ccc;
-  padding: 1% 3%; }
+  padding: 10px 40px; }
   .sidebar a {
     text-decoration: none;
     color: #008C83; }
@@ -998,86 +1072,11 @@ object {
     margin: 0; }
 
 /* Buttons */
-.btn, .shop-btn, .adv-btn, .single-post-container .submit-btn, .find-us-container .submit-btn, .entry-btn, .btn-social, .read-btn {
-  text-transform: uppercase; }
+a.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block; }
 
-.btn:hover, .shop-btn:hover, .adv-btn:hover, .single-post-container .submit-btn:hover, .find-us-container .submit-btn:hover, .entry-btn:hover, .btn-social:hover, .read-btn:hover {
+a.btn:hover {
   outline: -webkit-focus-ring-color auto 5px; }
-
-/* Home-shop */
-.shop-container {
-  border: 1px solid #DFDFDF;
-  border-top: 3px solid #DFDFDF;
-  padding: 10px; }
-  .shop-container p {
-    margin: 20px 0; }
-
-.shop-btn, .adv-btn, .single-post-container .submit-btn, .find-us-container .submit-btn {
-  color: white;
-  background-color: #008C83;
-  border: none;
-  padding: 8px 15px; }
-
-/*Journal*/
-.journal-container {
-  border: 1px solid #DFDFDF;
-  margin: 0 5px; }
-  .journal-container p {
-    font-size: 0.5em; }
-  .journal-container h3 {
-    text-transform: uppercase;
-    color: #008C83;
-    margin-bottom: 10px; }
-  .journal-container div {
-    padding: 10px; }
-  .journal-container .img-container {
-    border-bottom: 3px solid #DFDFDF; }
-
-.entry-btn, .btn-social, .read-btn {
-  border: 1px solid black;
-  padding: 8px 15px;
-  background-color: transparent; }
-
-/* Home-Adventures */
-.latest-posts-container {
-  height: 400px; }
-  .latest-posts-container h2 {
-    font-size: 2em;
-    line-height: 1.3em; }
-  .latest-posts-container h3 {
-    font-size: 1.7em;
-    line-height: 1.3em; }
-  .latest-posts-container h4 {
-    font-size: 1.1em;
-    line-height: 1.3em;
-    margin: 1em 0; }
-
-.read-btn {
-  border: 1px solid white;
-  color: white;
-  margin-top: 20px; }
-
-.article-box, .article-box-1, .article-box-2, .article-box-3, .article-box-4 {
-  height: 100%;
-  padding: 20px 10px;
-  background: center/cover no-repeat; }
-
-.article-box-1 {
-  margin-right: 7px; }
-
-.article-box-2 {
-  margin-bottom: 7px; }
-
-.article-box-3 {
-  margin-right: 7px; }
-
-.adv-btn, .single-post-container .submit-btn, .find-us-container .submit-btn {
-  margin: 40px 20px 20px 20px; }
-
-.bg-image {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0; }

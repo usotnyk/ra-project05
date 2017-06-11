@@ -1,4 +1,3 @@
-this is archive
 <?php
 /**
  * The template for displaying archive pages.
@@ -7,38 +6,43 @@ this is archive
  */
 
 get_header(); ?>
+<div class=flex>
+	<div class="archive-journal-container flex-one margin-md">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">
+				
+			<?php if ( have_posts() ) : ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+				<header class="page-header">
+					<?php
+						the_archive_title( '<h2 class="page-title">', '</h2>' );
+						the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					?>
+				</header><!-- .page-header -->
 
-		<?php if ( have_posts() ) : ?>
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+					<?php
+						get_template_part( 'template-parts/content' );
+					?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+				<?php endwhile; ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+				<?php the_posts_navigation(); ?>
 
-			<?php endwhile; ?>
+			<?php else : ?>
 
-			<?php the_posts_navigation(); ?>
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php else : ?>
+			<?php endif; ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			</main><!-- #main -->
+		</div><!-- #primary -->
+	</div>
 
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+  <aside class="width-third sidebar">
+    <?php get_sidebar(); ?>
+  </aside>
+</div>
 <?php get_footer(); ?>
