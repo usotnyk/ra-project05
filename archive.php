@@ -7,8 +7,7 @@
 
 get_header(); ?>
 <div class=flex>
-	<div class="archive-journal-container flex-one margin-md">
-		<div id="primary" class="content-area">
+	<div id="primary" class="content-area archive-journal-container flex-one margin-md">
 			<main id="main" class="site-main" role="main">
 				
 			<?php if ( have_posts() ) : ?>
@@ -20,26 +19,20 @@ get_header(); ?>
 					?>
 				</header><!-- .page-header -->
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php
+				<?php /* Start the Loop */
+					while ( have_posts() ) : the_post();
 						get_template_part( 'template-parts/content' );
-					?>
+					endwhile;
 
-				<?php endwhile; ?>
+					the_posts_navigation();
 
-				<?php the_posts_navigation(); ?>
+					else :
+					get_template_part( 'template-parts/content', 'none' );
 
-			<?php else : ?>
-
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-			<?php endif; ?>
+					endif; ?>
 
 			</main><!-- #main -->
-		</div><!-- #primary -->
-	</div>
+	</div><!-- #primary -->
 
   <aside class="width-third sidebar">
     <?php get_sidebar(); ?>

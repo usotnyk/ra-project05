@@ -8,6 +8,8 @@ function wmpudev_enqueue_icon_stylesheet() {
 }
 add_action( 'wp_enqueue_scripts', 'wmpudev_enqueue_icon_stylesheet' );
 
+
+
 //Add jquery library + custom js
 
 function custom_scripts() {
@@ -19,6 +21,9 @@ function custom_scripts() {
   
   //call all custom js
   wp_enqueue_script('main-js');
+
+  //Google fonts
+  wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i', false );
 }
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 

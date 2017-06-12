@@ -231,6 +231,16 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Novecento';
+  src: url(/ra-project05/wp-content/themes/redstarter-master/assets/fonts/Novecento/Novecentosanswide-DemiBold.ttf);
+  font-weight: bold; }
+
+@font-face {
+  font-family: 'Novecento';
+  src: url(/ra-project05/wp-content/themes/redstarter-master/assets/fonts/Novecento/Novecentosanswide-Normal.ttf);
+  font-weight: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -242,14 +252,15 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-family: "Novecento", sans-serif; }
 
 h1 {
   text-transform: uppercase;

@@ -6,10 +6,10 @@
  */
 
 get_header(); ?>
+
 <div class="flex">
-	<div class="search-results-container margin-md flex-one">
-		<section id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
+	<div id="primary" class="content-area search-results-container margin-md flex-one">
+		<main id="main" class="site-main" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -17,26 +17,25 @@ get_header(); ?>
 					<h1 class="page-title"><?php printf( esc_html( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header><!-- .page-header -->
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php /* Start the Loop */
+				while ( have_posts() ) : the_post();
+					get_template_part( 'template-parts/content', 'search' );
+				endwhile;
 
-					<?php get_template_part( 'template-parts/content', 'search' ); ?>
+				red_starter_numbered_pagination(); ?>
 
-				<?php endwhile; ?>
+			<?php else :
 
-				<?php red_starter_numbered_pagination(); ?>
+				get_template_part( 'template-parts/content', 'none' );
 
-			<?php else : ?>
+			endif; ?>
 
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
-			<?php endif; ?>
-
-			</main><!-- #main -->
-		</section><!-- #primary -->
-	</div>
 	<aside class="width-third sidebar">
     <?php get_sidebar(); ?>
   </aside>
+
 </div>
 <?php get_footer(); ?>
